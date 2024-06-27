@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="dismissListener"
+            type="com.tawkeel.base.data.DismissListener" />
+
+        <import type="kotlin.Unit" />
+
+    </data>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/dialog_background"
+            android:elevation="@dimen/_2sdp"
+            android:layout_margin="@dimen/_24sdp"
+            android:orientation="vertical">
+
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/titleText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_34sdp"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="32sp"
+                app:layout_constraintEnd_toEndOf="@+id/doneButton"
+                app:layout_constraintStart_toStartOf="@+id/doneButton"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Title" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/descriptionText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="@dimen/_13sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:gravity="center"
+                app:layout_goneMarginTop="@dimen/_34sdp"
+                android:textAlignment="center"
+                android:textSize="@dimen/_12sdp"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="@+id/doneButton"
+                app:layout_constraintStart_toStartOf="@+id/doneButton"
+                app:layout_constraintTop_toBottomOf="@id/titleText"
+                tools:text="Error message" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/doneButton"
+                style="@style/CommonButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_marginHorizontal="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_34sdp"
+                android:layout_marginBottom="@dimen/_26sdp"
+                android:padding="0dp"
+                tools:text="Done"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/descriptionText"
+                app:layout_constraintVertical_bias="0.19"
+                app:single_on_click="@{() -> dismissListener.onDismiss(kotlin.Unit.INSTANCE)}" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</layout>

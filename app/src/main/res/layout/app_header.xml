@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="data"
+            type="com.perfectlypressed.android.ui.header.HeaderConfig" />
+
+        <import type="kotlin.Unit" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutHeader"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_70sdp"
+        android:elevation="@dimen/_25sdp"
+        app:drawable="@{data.itemBackground}">
+
+        <!--
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/backButton"
+            view_visibility="@{data.backButtonConfig.canShowBackButton}"
+            android:layout_width="@dimen/_24sdp"
+            android:layout_height="@dimen/_24sdp"
+            android:layout_marginVertical="@dimen/_8sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:scaleType="centerInside"
+            android:visibility="gone"
+            app:drawable_res="@{data.backButtonConfig.backButtonIconRes}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:single_on_click="@{() -> data.backButtonConfig.clickCallback.onClick(kotlin.Unit.INSTANCE)}"
+            tools:visibility="visible" />
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/circleImageView"
+            view_visibility="@{!data.chatTitleConfig.titleName.empty}"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:src="@drawable/general_male_placeholder"
+            android:padding="@dimen/_1sdp"
+            app:civ_border_width="@dimen/_1sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/backButton"
+            app:layout_constraintTop_toTopOf="parent"
+            app:civ_border_color="@color/white"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:background="@drawable/gradient_umrah_upload_img_bg"
+            app:url="@{data.chatTitleConfig.imageUrl}" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/chatUserName"
+            style="@style/RegularFont"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/_8sdp"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:maxWidth="@dimen/_200sdp"
+            android:textAlignment="viewStart"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_15ssp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/notificationButton"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/circleImageView"
+            app:layout_constraintTop_toTopOf="parent"
+            app:set_text_or_hide_if_empty="@{data.chatTitleConfig.titleName}"
+            tools:text="Header " />
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/notificationButton"
+            view_visibility="@{data.headerRightButtonConfig.headerRightButtonType instanceof HeaderRightButtonType.Notification || data.headerRightButtonConfig.headerRightButtonType instanceof HeaderRightButtonType.Home}"
+            android:layout_width="@dimen/_16sdp"
+            android:layout_height="@dimen/_16sdp"
+            android:layout_marginVertical="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:background="@drawable/transparent_background_square"
+            android:scaleType="centerInside"
+            android:visibility="gone"
+            app:header_right_icon_drawable_res="@{data.headerRightButtonConfig.headerRightButtonType}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:single_on_click="@{() -> data.headerRightButtonConfig.clickCallback.onClick(data.headerRightButtonConfig.headerRightButtonType)}"
+            tools:src="@drawable/notification_icon_empty"
+            tools:visibility="visible" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/freshDeskIcon"
+            view_visibility="@{data.freshDeskIconConfig.canShowFreshDeskIcon}"
+            android:layout_width="@dimen/_16sdp"
+            android:layout_height="@dimen/_16sdp"
+            android:layout_marginVertical="@dimen/_8sdp"
+            android:background="@drawable/transparent_background_square"
+            app:drawable_res="@{data.freshDeskIconConfig.iconRes}"
+            android:layout_marginStart="@dimen/_16sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:single_on_click="@{() -> data.freshDeskIconConfig.clickCallback.onClick(kotlin.Unit.INSTANCE)}"
+            tools:src="@drawable/ic_support_clear"
+            tools:visibility="visible" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/appCompatTextView5"
+            style="@style/BoldFont"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:gravity="center"
+            android:padding="@dimen/_2sdp"
+            android:maxWidth="@dimen/_200sdp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_15ssp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:set_text_or_hide_if_empty="@{data.titleConfig.title}"
+            tools:text="Header " />-->
+
+<!--        <FrameLayout-->
+<!--            view_visibility="@{data.itemBackground != null}"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="@dimen/_5sdp"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/guideline20">-->
+
+<!--            &lt;!&ndash; **** Place Your Content Here **** &ndash;&gt;-->
+
+<!--            <View-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="5dp"-->
+<!--                android:background="@drawable/custom_shadow" />-->
+
+<!--        </FrameLayout>-->
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.8" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

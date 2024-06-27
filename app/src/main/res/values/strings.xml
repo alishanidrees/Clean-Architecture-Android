@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">PerfectlyPressed</string>
+    <string name="ok">Ok</string>
+    <string name="permission_denied_permanently">Permission denied permanently, please navigate to settings to grant permissions and continue using this feature</string>
+    <string name="no_permission_message">Not able to read permissions right now, please try again!</string>
+    <string name="navigation_exception">No direction found from this fragment.</string>
+    <string name="no_internet_connection">No internet connection</string>
+    <string name="refresh">Refresh</string>
+
+</resources>

@@ -1,0 +1,99 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+
+    <style name="Theme.Tawkeel" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/app_orange</item>
+        <item name="colorPrimaryVariant">@color/app_orange</item>
+        <item name="colorOnPrimary">@color/app_orange</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/app_yellow</item>
+        <item name="colorSecondaryVariant">@color/app_yellow</item>
+        <item name="colorOnSecondary">@color/app_yellow</item>
+       <!-- <item name="android:fontFamily">@font/noto_sans_regular</item>-->
+        <item name="android:textColorHint">@color/text_hint_color</item>
+        <item name="android:editTextColor">@android:color/white</item>
+        <item name="android:navigationBarColor">@color/appDarkColor</item>
+        <!-- <item name="android:windowTranslucentStatus">true</item>-->
+        <!--    <item name="android:windowDrawsSystemBarBackgrounds">false</item>
+            <item name="android:navigationBarColor">@color/appDarkColor</item>-->
+        <!-- Status bar color. -->
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:statusBarColor">@color/appDarkColor</item>
+        <!-- Customize your theme here. -->
+        <!--  <item name="android:windowBackground">@drawable/ic_tawkeel_onboard_bg</item>-->
+
+    </style>
+
+    <style name="MyRadioButton" parent="Theme.AppCompat.Light">
+        <item name="colorControlNormal">@color/white</item>
+        <item name="colorControlActivated">@color/app_orange</item>
+    </style>
+   <!-- <style name="CalenderViewDateCustomText" parent="android:TextAppearance.DeviceDefault.Small">
+        <item name="android:textColor">@color/date_color_selector</item>
+        <item name="android:weekNumberColor">@color/black</item>
+    </style>
+
+    <style name="CalenderViewWeekCustomText" parent="android:TextAppearance.DeviceDefault.Small">
+        <item name="android:textColor">@color/date_color_selector</item>
+    </style>-->
+    <style name="CalendarView" />
+    <style name="CalendarView.DayOfTheWeek">
+        <item name="android:textSize">14sp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="CalendarView.DayOfTheMonth">
+        <item name="android:textSize">14sp</item>
+        <item name="android:minHeight">@dimen/_40sdp</item>
+    </style>
+    <style name="CalenderViewCustom" parent="android:Widget.CalendarView">
+        <item name="colorAccent">@color/white</item>
+        <item name="colorPrimary">@color/black</item>
+        <item name="colorPrimaryDark">@color/black</item>
+        <item name="colorControlActivated">@color/app_orange</item>
+       <!-- <item name="android:textColor">@color/date_color_selector</item>-->
+        <item name="android:textColorPrimary">@color/black</item>
+        <item name="android:calendarTextColor">@color/red</item>
+        <item name="android:focusedMonthDateColor">@color/black</item>
+        <item name="android:weekNumberColor">@color/black</item>
+        <item name="android:selectedWeekBackgroundColor">@color/black</item>
+        <item name="android:selectedDateVerticalBar">@color/black</item>
+        <item name="android:unfocusedMonthDateColor">@color/black</item>
+
+    </style>
+    <style name="CustomCardViewStyle" parent="@style/Widget.MaterialComponents.CardView">
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay_card_custom_corners</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay_card_custom_corners" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopRight">0dp</item>
+        <item name="cornerSizeTopLeft">0dp</item>
+        <item name="cornerSizeBottomRight">36dp</item>
+        <item name="cornerSizeBottomLeft">36dp</item>
+    </style>
+    <style name="Theme.App.Starting" parent="Theme.SplashScreen">
+        // Set the splash screen backgroundanimated icon and animation duration.
+        <item name="windowSplashScreenBackground">@color/primary_color_2</item>
+        // Use windowSplashScreenAnimatedIcon to add either a drawable or an
+        // animated drawable. One of these is required.
+       <!-- <item name="windowSplashScreenAnimatedIcon">@drawable/ic_splash_logo_main</item>-->
+        <item name="windowSplashScreenAnimationDuration">0</item>
+        // Set the theme of the Activity that directly follows your splash screen.
+        <item name="postSplashScreenTheme">@style/Theme.Tawkeel</item>
+        # Required.
+    </style>
+    <style name="Theme.App.Starting.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="Theme.App.Starting.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="Theme.App.Starting.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+
+
+
+</resources>
